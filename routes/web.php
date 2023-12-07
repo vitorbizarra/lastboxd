@@ -16,6 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $lastfm = new \App\Services\Lastfm\LastfmService();
 
-    dd($lastfm->track()->getInfo(mbid: '37d516ab-d61f-4bcb-9316-7a0b3eb845a8'));
+    dd($lastfm->track()->getSimilar(mbid: '37d516ab-d61f-4bcb-9316-7a0b3eb845a8'));
     dd($lastfm->geo()->getTopTracks('Brazil'));
 });
