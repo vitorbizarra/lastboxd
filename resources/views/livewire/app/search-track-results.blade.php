@@ -1,0 +1,3 @@
+<div>
+    {{ session('term') }}
+</div>

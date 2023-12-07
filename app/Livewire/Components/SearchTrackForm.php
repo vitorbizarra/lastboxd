@@ -2,12 +2,22 @@
 
 namespace App\Livewire\Components;
 
+use App\Livewire\App\SearchTrackResults;
+use App\Services\Lastfm\LastfmService;
+use Livewire\Attributes\Rule;
 use Livewire\Component;
 
 class SearchTrackForm extends Component
 {
-    public function render()
+    #[Rule(['required', 'string'])]
+    public ?string $term;
+
+    public function search()
     {
-        return view('livewire.components.search-track-form');
+        $this->validate();
+
+        session()->flash('term', $this->term);
+
+        $this->redirect(route('results', ['term' => $this->term]));
     }
 }
