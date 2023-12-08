@@ -2,8 +2,7 @@
 
 namespace App\Livewire\App;
 
-use App\Services\Lastfm\Entities\Track;
-use App\Services\Lastfm\LastfmService;
+use Aerni\Spotify\Spotify;
 use Illuminate\Support\Collection;
 use Livewire\Component;
 
@@ -22,17 +21,10 @@ class SearchTrackResults extends Component
         $this->tracks = collect([]);
 
         $this->loadTracks();
-
-        dump($this->tracks);
     }
 
     public function loadTracks()
     {
-        $lastfm = new LastfmService();
-
-        $lastfm
-            ->track()
-            ->search($this->term, page: $this->page)
-            ->each(fn(Track $track) => $this->tracks->push($track));
+        
     }
 }
