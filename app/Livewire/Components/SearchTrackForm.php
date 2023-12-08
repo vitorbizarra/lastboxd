@@ -16,8 +16,6 @@ class SearchTrackForm extends Component
     {
         $this->validate();
 
-        session()->flash('term', $this->term);
-
         $this->redirect(route('results', ['term' => $this->term]));
     }
 }
