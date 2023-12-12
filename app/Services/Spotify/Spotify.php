@@ -2,7 +2,7 @@
 
 namespace App\Services\Spotify;
 
-use App\Services\Spotify\Endpoints\HasAuth;
+use App\Services\Spotify\Endpoints\Auth\HasAuth;
 use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Support\Facades\Http;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\Spotify\Endpoints;
+namespace App\Services\Spotify\Endpoints\Auth;
 
 trait HasAuth
 {

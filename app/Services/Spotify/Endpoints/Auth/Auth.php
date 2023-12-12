@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\Spotify\Endpoints;
+namespace App\Services\Spotify\Endpoints\Auth;
 
 use App\Services\Spotify\Exceptions\SpotifyAuthException;
 use GuzzleHttp\Client;
