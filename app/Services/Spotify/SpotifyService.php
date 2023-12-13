@@ -3,6 +3,7 @@
 namespace App\Services\Spotify;
 
 use App\Services\Spotify\Endpoints\Auth\HasAuth;
+use App\Services\Spotify\Endpoints\Search\HasSearch;
 use App\Services\Spotify\Endpoints\Tracks\HasTracks;
 use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Http\Client\Response;
@@ -12,10 +13,13 @@ class SpotifyService
 {
     use HasAuth;
     use HasTracks;
+    use HasSearch;
 
     public static PendingRequest $api;
 
     public static Response $response;
+
+    protected static string $endpoint;
 
     public static function getApi()
     {
