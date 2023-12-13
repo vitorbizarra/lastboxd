@@ -7,7 +7,7 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 use Illuminate\Support\Facades\Cache;
 
-class Auth
+class AuthEndpoint
 {
     private const SPOTIFY_API_TOKEN_URL = 'https://accounts.spotify.com/api/token';
 
