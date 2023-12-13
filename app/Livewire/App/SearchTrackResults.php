@@ -2,7 +2,7 @@
 
 namespace App\Livewire\App;
 
-use Aerni\Spotify\Spotify;
+use App\Services\Spotify\Spotify;
 use Illuminate\Support\Collection;
 use Livewire\Component;
 
@@ -10,21 +10,25 @@ class SearchTrackResults extends Component
 {
     public string $term;
 
-    public int $page;
+    public Collection $albums;
+
+    public Collection $artists;
 
     public Collection $tracks;
 
     public function mount(string $term)
     {
         $this->term = $term;
-        $this->page = 1;
-        $this->tracks = collect([]);
-
-        $this->loadTracks();
+        $this->loadItems();
     }
 
-    public function loadTracks()
+    public function loadItems()
     {
-        
+        $results = Spotify::searchItems($this->term, limit: 5)->get();
+
+        dump($results['artists']['items'][0]);
+        $this->albums = collect(data_get($results, 'albums'));
+        $this->artists = collect(data_get($results, 'artists'));
+        $this->tracks = collect(data_get($results, 'tracks'));
     }
 }
