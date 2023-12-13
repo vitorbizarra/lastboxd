@@ -6,7 +6,7 @@ use App\Services\Spotify\Spotify;
 use Illuminate\Support\Collection;
 use Livewire\Component;
 
-class SearchTrackResults extends Component
+class SearchResults extends Component
 {
     public string $term;
 

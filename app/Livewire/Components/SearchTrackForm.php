@@ -2,7 +2,7 @@
 
 namespace App\Livewire\Components;
 
-use App\Livewire\App\SearchTrackResults;
+use App\Livewire\App\SearchResults;
 use App\Services\Lastfm\LastfmService;
 use Livewire\Attributes\Rule;
 use Livewire\Component;
