@@ -49,7 +49,7 @@
                             {{ $album['name'] }}
                         </h5>
                         <span class="text-sm text-gray-300 w-full truncate">
-                            {{ str($album['type'])->title() }} - {{
+                            {{ date('Y', strtotime($album['release_date'])) }} - {{
                             collect($album['artists'])->pluck('name')->implode(', ') }}
                         </span>
 
@@ -75,7 +75,7 @@
                             {{ $track['name'] }}
                         </h5>
                         <span class="text-sm text-gray-300 w-full truncate">
-                            {{ str($track['type'])->title() }} - {{
+                            {{ $track['album']['name'] }} - {{
                             collect($track['artists'])->pluck('name')->implode(', ') }}
                         </span>
                     </div>
