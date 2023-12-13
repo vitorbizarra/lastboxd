@@ -6,7 +6,7 @@ use App\Services\Spotify\Spotify;
 
 trait HasTracks
 {
-    protected static const ENDPOINT = '/tracks';
+    protected const ENDPOINT = '/tracks';
 
     /**
      * Get Spotify catalog information for a single track identified by its unique Spotify ID.
