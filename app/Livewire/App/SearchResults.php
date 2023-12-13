@@ -26,7 +26,7 @@ class SearchResults extends Component
     {
         $results = Spotify::searchItems($this->term, limit: 5)->get();
 
-        dump($results['artists']['items'][0]);
+        dump($results);
         $this->albums = collect(data_get($results, 'albums'));
         $this->artists = collect(data_get($results, 'artists'));
         $this->tracks = collect(data_get($results, 'tracks'));
