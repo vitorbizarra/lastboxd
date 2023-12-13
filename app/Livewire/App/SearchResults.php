@@ -24,7 +24,7 @@ class SearchResults extends Component
 
     public function loadItems()
     {
-        $results = Spotify::searchItems($this->term, limit: 5)->get();
+        $results = Spotify::searchItems($this->term, limit: 9)->get();
 
         dump($results);
         $this->albums = collect(data_get($results, 'albums'));

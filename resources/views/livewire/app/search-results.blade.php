@@ -44,7 +44,7 @@
                 <div
                     class="w-full max-w-sm relative flex border border-gray-200 dark:border-gray-700 rounded-lg shadow overflow-hidden aspect-square
                     before:absolute before:top-0 before:left-0 before:h-full before:w-full before:content-[''] before:bg-gradient-to-b before:from-transparent before:to-black before:z-10">
-                    <div class="relative p-4 z-10 mt-auto w-full">
+                    <div class="relative p-4 z-10 mt-auto w-full flex flex-col">
                         <h5 class="mb-1 text-xl font-medium w-full truncate text-gray-900 dark:text-white">
                             {{ $album['name'] }}
                         </h5>
@@ -70,7 +70,7 @@
                     class="w-full max-w-sm relative flex border border-gray-200 dark:border-gray-700 rounded-lg shadow overflow-hidden aspect-square
                     before:absolute before:top-0 before:left-0 before:h-full before:w-full before:content-[''] before:bg-gradient-to-b before:from-transparent before:to-black before:z-10">
 
-                    <div class="relative p-4 z-10 mt-auto w-full">
+                    <div class="relative p-4 z-10 mt-auto w-full flex flex-col">
                         <h5 class="mb-1 text-xl font-medium w-full truncate text-gray-900 dark:text-white">
                             {{ $track['name'] }}
                         </h5>
