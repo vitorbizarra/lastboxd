@@ -94,6 +94,14 @@
                     @endif
                 </div>
                 @endforeach
+
+                <a href="{{ route('app.results.tracks', ['term' => $term]) }}"
+                    class="w-full max-w-sm border bg-white border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 aspect-square flex">
+                    <span class="text-white m-auto">
+                        See More <i class="bi bi-arrow-right"></i>
+                    </span>
+                </a>
+
                 <audio x-ref="trackPreviewAudio">
                     <source x-ref="trackPreviewSource" src="" type="audio/mpeg" />
                     Your browser does not support the audio format.
