@@ -19,5 +19,9 @@ Route::get('/', function () {
 
 Route::name('app.')->middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(function () {
     Route::get('/dashboard', \App\Livewire\App\Home::class)->name('dashboard');
-    Route::get('/results/{term}', \App\Livewire\App\Search\Items::class)->name('results');
+
+    Route::name('results.')->prefix('results')->group(function () {
+        Route::get('/{term}', \App\Livewire\App\Search\Items::class)->name('index');
+        Route::get('/tracks/{term}', \App\Livewire\App\Search\Tracks::class)->name('tracks');
+    });
 });

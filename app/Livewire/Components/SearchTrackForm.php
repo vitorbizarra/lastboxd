@@ -16,6 +16,6 @@ class SearchTrackForm extends Component
     {
         $this->validate();
 
-        $this->redirect(route('results', ['term' => $this->term]));
+        $this->redirect(route('app.results.index', ['term' => $this->term]));
     }
 }
