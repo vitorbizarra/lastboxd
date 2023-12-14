@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(function () {
+Route::name('app.')->middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(function () {
     Route::get('/dashboard', \App\Livewire\App\Home::class)->name('dashboard');
-    Route::get('/results/{term}', \App\Livewire\App\SearchResults::class)->name('results');
+    Route::get('/results/{term}', \App\Livewire\App\Search\Items::class)->name('results');
 });

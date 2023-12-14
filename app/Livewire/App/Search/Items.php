@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Livewire\App;
+namespace App\Livewire\App\Search;
 
 use App\Services\Spotify\Spotify;
 use Illuminate\Support\Collection;
 use Livewire\Component;
 
-class SearchResults extends Component
+class Items extends Component
 {
     public string $term;
 
